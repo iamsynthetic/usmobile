@@ -44,70 +44,73 @@ export default function AlternateHero2() {
 
     gsap.set(".txt1", { y: +100 });
     gsap.set(".txt2", { y: +100 });
-    tl2.current = gsap
-      .timeline({ paused: true })
-      .fromTo(
-        ".text-container",
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        },
-        {
-          duration: 1.25,
-          delay: 3,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          ease: "Expo.easeInOut",
-        }
-      )
-      .to(".txt1", {
-        y: 0,
-        duration: 1,
-        delay: -1,
-        ease: "Expo.easeInOut",
-      })
-      .fromTo(
-        ".text-container2",
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-        },
-        {
+    if (tl2.current) {
+      tl2.current = gsap
+        .timeline({ paused: true })
+        .fromTo(
+          ".text-container",
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          },
+          {
+            duration: 1.25,
+            delay: 3,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "Expo.easeInOut",
+          }
+        )
+        .to(".txt1", {
+          y: 0,
           duration: 1,
-          delay: -0.9,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          delay: -1,
           ease: "Expo.easeInOut",
-        }
-      )
-      .to(".txt2", {
-        y: 0,
-        duration: 1,
-        delay: -1,
+        })
+        .fromTo(
+          ".text-container2",
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          },
+          {
+            duration: 1,
+            delay: -0.9,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "Expo.easeInOut",
+          }
+        )
+        .to(".txt2", {
+          y: 0,
+          duration: 1,
+          delay: -1,
+          ease: "Expo.easeInOut",
+        });
+    }
+    if (tl1.current) {
+      tl1.current = gsap.timeline().to(".thewhitebglayer", {
+        scaleY: 1,
+        duration: 1.25,
+        delay: 4,
         ease: "Expo.easeInOut",
       });
-
-    tl1.current = gsap.timeline().to(".thewhitebglayer", {
-      scaleY: 1,
-      duration: 1.25,
-      delay: 4,
-      ease: "Expo.easeInOut",
-    });
-    tl1.current
-      .fromTo(
-        backgroundref.current,
-        {
-          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-        },
-        {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      tl1.current
+        .fromTo(
+          backgroundref.current,
+          {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+          },
+          {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            duration: 1,
+            delay: -1,
+            ease: "Quint.easeInOut",
+          }
+        )
+        .from(imageref.current, {
+          y: "50vh",
           duration: 1,
           delay: -1,
           ease: "Quint.easeInOut",
-        }
-      )
-      .from(imageref.current, {
-        y: "50vh",
-        duration: 1,
-        delay: -1,
-        ease: "Quint.easeInOut",
-      });
+        });
+    }
   });
 
   useEffect(() => {

@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------------ colors ------------------------------------------------------------------------*/
+
+$color-cream: #f2dcb3; /* hex */
+$color-red: #d9042b; /* hex */
+$color-lightblue: #77b3d9; /* hex */
+$color-greyblue: #e5f2f9; /* hex */
+$color-darkblue: #1a3073; /* hex */
+
+$bg-cream: rgba($color-cream, 1);
+$bg-red: rgba($color-red, 1);
+$bg-lightblue: rgba($color-lightblue, 1);
+$bg-greyblue: rgba($color-greyblue, 1);
+$bg-darkblue: rgba($color-darkblue, 1);
+
+/*------------------------------------------------------------------------ end colors ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ content ------------------------------------------------------------------------*/
+
+.mobileimage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+/*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
+// @supports (contain: paint) and (not (-moz-appearance: none)) {
+//   .missionsection {
+//     margin-bottom: 0px;
+//   }
+//   .secrets {
+//     color: $color-red;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
+//   .missionsection {
+//     margin-bottom: 0px;
+//   }
+//   .secrets {
+//     color: $color-red;
+//   }
+// }
+// /* laptop */
+// @media only screen and (max-height: 800px) {
+//   .missionsection {
+//     margin-top: 20vh;
+//     // background-color: red;
+//   }
+// }
+/*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

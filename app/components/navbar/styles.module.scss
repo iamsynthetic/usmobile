@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------ colors ------------------------------------------------------------------------*/
+
+$color-cream: #f2dcb3; /* hex */
+$color-red: #d9042b; /* hex */
+$color-lightblue: #77b3d9; /* hex */
+$color-greyblue: #e5f2f9; /* hex */
+$color-darkblue: #1a3073; /* hex */
+
+$bg-cream: rgba($color-cream, 1);
+$bg-red: rgba($color-red, 1);
+$bg-lightblue: rgba($color-lightblue, 1);
+$bg-greyblue: rgba($color-greyblue, 1);
+$bg-darkblue: rgba($color-darkblue, 1);
+
+/*------------------------------------------------------------------------ end colors ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ content ------------------------------------------------------------------------*/
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.buttoncolor {
+  color: $bg-darkblue;
+}
+.thebutton {
+  background-color: $bg-cream;
+  border-radius: 6px;
+  border: none;
+  color: black;
+  padding: 6px 8px 6px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+}
+.logo {
+  display: block;
+  // position: absolute;
+  // margin-left: 580px;
+  // margin-top: 93px;
+  // margin-top: -300px;
+}
+
+.positionmenu {
+  position: absolute;
+  top: -20vh;
+}
+
+/*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
+// @media (min-height: 500px) {
+//   body.scroll-past-header .thenav {
+//     color: black; /* Change text color to white when scrolling past */
+//   }
+// }
+
+// @supports (contain: paint) and (not (-moz-appearance: none)) {
+
+// }
+
+// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
+
+// }
+
+/*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

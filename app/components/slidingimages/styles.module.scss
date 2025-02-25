@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------------ colors ------------------------------------------------------------------------*/
+
+$color-cream: #f2dcb3; /* hex */
+$color-red: #d9042b; /* hex */
+$color-lightblue: #77b3d9; /* hex */
+$color-greyblue: #e5f2f9; /* hex */
+$color-darkblue: #1a3073; /* hex */
+
+$bg-cream: rgba($color-cream, 1);
+$bg-red: rgba($color-red, 1);
+$bg-lightblue: rgba($color-lightblue, 1);
+$bg-greyblue: rgba($color-greyblue, 1);
+$bg-darkblue: rgba($color-darkblue, 1);
+
+/*------------------------------------------------------------------------ end colors ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ content ------------------------------------------------------------------------*/
+
+// .slidingimages {
+//   display: flex;
+//   width: 80vw;
+//   margin-top: 200px;
+//   margin-bottom: 200px;
+//   flex-direction: column;
+// }
+
+// .slider {
+//   position: relative;
+//   display: flex;
+//   width: 80vw;
+//   max-width: 1340px;
+//   left: 0vw;
+//   background-color: red;
+// }
+
+.brand {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  // margin-right: -30px;
+  // margin-left: -30px;
+}
+
+.imagecontainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.theimage {
+  object-fit: cover;
+}
+
+/*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
+// @supports (contain: paint) and (not (-moz-appearance: none)) {
+
+// }
+
+// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
+
+// }
+
+/*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

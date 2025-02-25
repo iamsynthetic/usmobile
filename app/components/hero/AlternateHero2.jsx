@@ -135,7 +135,7 @@ export default function AlternateHero2() {
       >
         <div className="flex flex-col max-w-[1440px] xs:pl-4 xs:pr-4 lg:px-12">
           <div
-            className={`xs:pt-[calc(6vh+100px)] xs:mb-[calc(6vh)] lg:pt-[calc(10vh+100px)] lg:mb-[calc(10vh)] lexend text-black `}
+            className={`xs:pt-[calc(6vh+100px)] xs:pb-[calc(6vh)] lg:pt-[calc(10vh+100px)] lg:mb-[calc(10vh)] lexend text-black `}
           >
             <div className="text-container bg-white">
               <p className="txt1 text-[clamp(2.25rem,5vw+.5rem,5rem)] leading-tight text-black">

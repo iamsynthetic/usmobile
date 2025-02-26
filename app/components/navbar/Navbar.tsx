@@ -825,7 +825,7 @@ const Navbar = () => {
     <div
       className={`${
         isPastHero ? `bg-transparent z-[1000]` : `bg-white`
-      } fixed top-0 max-w-[1440px] w-screen z-[1000]`}
+      } fixed top-[10px] max-w-[1440px] w-screen z-[1000]`}
     >
       {template}
     </div>

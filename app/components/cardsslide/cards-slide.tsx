@@ -200,7 +200,7 @@ export default function CardsSlide() {
 
   return (
     <>
-      <div className={`${styles.slidingimages} max-w-[1440px]`}>
+      <div className={`${styles.slidingimages} max-w-[1440px] bg-green-200`}>
         <div className="w-screen h-[max-content]">
           <div className="flex flex-col xs:ml-4 xs:mr-8 lg:px-12 ">
             <section

@@ -185,6 +185,47 @@ export default function AlternateHero2() {
                 Seamlessly move between networks with ease, ensuring you’re
                 always connected no matter where you are.
               </motion.p>
+              <motion.div className="text-center">
+          <div
+           style={{ y }}
+           initial={{ opacity: 0, y: 200 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{
+             type: "tween",
+             ease: [0, 0.71, 0.2, 1.01],
+             delay: 3.3,
+             duration: 0.6,
+           }}
+            id="signup-button"
+            className={`${styles.thebutton} signuplearnmorebtn spacegrotesklight mt-6`}
+            onMouseEnter={() => {
+              navbuttonhover(
+                ".signuplearnmorebtn",
+                ".signuplearnmorelabel",
+                ".signupllearnmorearrow"
+              );
+            }}
+            onMouseLeave={() => {
+              navbuttonleave(
+                ".signuplearnmorebtn",
+                ".signuplearnmorelabel",
+                ".signupllearnmorearrow"
+              );
+            }}
+          >
+            <Link
+              href="https://app.usmobile.com/dashboard/auth?signup=true&redirectTo=/dashboard/app/new-plan-checkout&utm_page_url=/"
+              target="_blank"
+            >
+              <span className="flex signuplearnmorelabel">
+                GET STARTED{" "}
+                <span className="signuplearnmorearrow ml-[3px] mt-[2px]">
+                  <GoArrowRight />
+                </span>
+              </span>
+            </Link>
+          </div>
+        </motion.div>
             </div>
             <div className="flex flex-row xs:mt-[4vh] lg:mt-[2vh] w-[100%]">
                 <motion.div

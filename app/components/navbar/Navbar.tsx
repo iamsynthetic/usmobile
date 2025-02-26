@@ -777,7 +777,7 @@ const Navbar = () => {
   } else {
     template = (
       <div className="flex justify-between h-20 items-center pl-4 pr-8">
-        <Link href="/" className="z-10 mobilelogo">
+        <Link href="/" className="z-10 -my-4 mobilelogo">
           <div className={`${styles.buttoncolor}`}>
             <Image
               src={"/images/nav/usmobile-logo-black.svg"}
@@ -788,7 +788,7 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <div className="flex justify-end -mt-2 z-30">
+        <div className="flex justify-end -my-4 z-30">
           <div className="flex -mr-3 text-black">
             <Hamburger size={24} toggled={isOpen} toggle={setOpen} />
           </div>

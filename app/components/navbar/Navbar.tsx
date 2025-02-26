@@ -776,8 +776,8 @@ const Navbar = () => {
     );
   } else {
     template = (
-      <div className="flex justify-between h-24  items-center pl-4 pr-8">
-        <Link href="/" className="z-10 -my-6 mobilelogo">
+      <div className="flex justify-between h-20 items-center pl-4 pr-8">
+        <Link href="/" className="z-10 py-3 mobilelogo">
           <div className={`${styles.buttoncolor}`}>
             <Image
               src={"/images/nav/usmobile-logo-black.svg"}
@@ -824,8 +824,8 @@ const Navbar = () => {
   return (
     <div
       className={`${
-        isPastHero ? `bg-transparent z-[1000]` : `bg-purple-200`
-      } fixed max-w-[1440px] w-screen z-[1000]`}
+        isPastHero ? `bg-transparent z-[1000]` : `bg-orange-400`
+      } fixed top-0 max-w-[1440px] w-screen z-[1000]`}
     >
       {template}
     </div>

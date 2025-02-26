@@ -487,20 +487,20 @@ export default function PerksMobileSection({ className }: Props) {
                 <div className="flex flex-row w-full m-auto">
                   <div
                     id="perks-perk1-number"
-                    className="flex w-20 spacegrotesk text-3xl"
+                    className="flex w-20 spacegrotesk text-3xl text-black"
                   >
                     01
                   </div>
                   <div className="flex flex-col w-full">
                     <div
                       id="perks-perk1-title2"
-                      className="flex w-full spacegroteskbold text-3xl "
+                      className="flex w-full spacegroteskbold text-3xl text-black"
                     >
                       Music
                     </div>
                     <div
                       id="perks-perk1-subtitle"
-                      className="flex w-full spacegroteskbold text-xl "
+                      className="flex w-full spacegroteskbold text-xl text-black"
                     >
                       Listen to millions of songs ad-free
                     </div>
@@ -510,7 +510,7 @@ export default function PerksMobileSection({ className }: Props) {
                           <div className="flex text-xl mt-1 mr-1">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Slacker Plus LiveXLive
                           </div>
                         </div>
@@ -518,7 +518,7 @@ export default function PerksMobileSection({ className }: Props) {
                           <div className="flex text-xl mt-1 mr-1">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Pandora Plus
                           </div>
                         </div>
@@ -526,7 +526,7 @@ export default function PerksMobileSection({ className }: Props) {
                           <div className="flex text-xl mt-1 mr-1">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Audible
                           </div>
                         </div>
@@ -536,15 +536,15 @@ export default function PerksMobileSection({ className }: Props) {
                           <div className="flex text-xl mt-1 mr-1">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Spotify Family
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Apple Music Family
                           </div>
                         </div>
@@ -572,72 +572,72 @@ export default function PerksMobileSection({ className }: Props) {
                 <div className="flex flex-row w-full m-auto">
                   <div
                     id="perks-perk2-number"
-                    className="flex w-20 spacegrotesk text-3xl"
+                    className="flex w-20 spacegrotesk text-3xl text-black"
                   >
                     02
                   </div>
                   <div className="flex flex-col w-full">
                     <div
                       id="perks-perk2-title"
-                      className="flex w-full spacegroteskbold text-3xl "
+                      className="flex w-full spacegroteskbold text-3xl  text-black"
                     >
                       Video
                     </div>
                     <div
                       id="perks-perk2-subtitle"
-                      className="flex w-full spacegroteskbold text-xl "
+                      className="flex w-full spacegroteskbold text-xl  text-black"
                     >
                       Catch all the best movies and shows
                     </div>
                     <div id="perks-perk2-body" className="flex flex-row mt-3 ">
                       <div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Apple TV Plus
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Disney Plus
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Hulu
                           </div>
                         </div>
                       </div>
                       <div className="xs:ml-5 md:ml-8 xl:ml-24">
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             ESPN Plus
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Netflix Standard
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Max
                           </div>
                         </div>
@@ -665,38 +665,41 @@ export default function PerksMobileSection({ className }: Props) {
                 <div className="flex flex-row w-full m-auto">
                   <div
                     id="perks-perk3-number"
-                    className="flex w-20 spacegrotesk text-3xl"
+                    className="flex w-20 spacegrotesk text-3xl text-black"
                   >
                     03
                   </div>
                   <div className="flex flex-col w-full">
                     <div
                       id="perks-perk3-title"
-                      className="flex w-full spacegroteskbold text-3xl "
+                      className="flex w-full spacegroteskbold text-3xl  text-black"
                     >
                       Gaming
                     </div>
                     <div
                       id="perks-perk3-subtitle"
-                      className="flex w-full spacegroteskbold text-xl "
+                      className="flex w-full spacegroteskbold text-xl  text-black"
                     >
                       Play online and get free games
                     </div>
-                    <div id="perks-perk3-body" className="flex flex-row mt-3 ">
+                    <div
+                      id="perks-perk3-body"
+                      className="flex flex-row mt-3  text-black"
+                    >
                       <div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             PlayStation Plus
                           </div>
                         </div>
                         <div className="flex flex-row">
-                          <div className="flex text-xl mt-1 mr-1">
+                          <div className="flex text-xl mt-1 mr-1 text-black">
                             <IoCheckmarkOutline />
                           </div>
-                          <div className="flex w-full spacegrotesk text-xl">
+                          <div className="flex w-full spacegrotesk text-xl text-black">
                             Xbox Gamepass
                           </div>
                         </div>

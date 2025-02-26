@@ -33,18 +33,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactLenis root>
-      <html lang="en">
-        {/* prettier-ignore */}
-        <body className={`${spacegrotesk.variable} ${lexend.variable} antialiased hidebottomscroll`}>
-        <Provider>
-        <AppWrapper>
-        <PreloaderContainer />
-        <main>{children}</main>
-        </AppWrapper>
-        </Provider>
-      </body>
-      </html>
-    </ReactLenis>
+    <>
+      <ReactLenis root>
+        <html lang="en">
+          {/* prettier-ignore */}
+          <body className={`${spacegrotesk.variable} ${lexend.variable} antialiased hidebottomscroll`}>
+            {/* <Provider> */}
+            <AppWrapper>
+            <PreloaderContainer />
+            <main>{children}</main>
+            </AppWrapper>
+            {/* </Provider> */}
+          </body>
+        </html>
+      </ReactLenis>
+    </>
   );
 }

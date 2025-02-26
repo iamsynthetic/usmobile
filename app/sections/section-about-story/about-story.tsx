@@ -261,7 +261,7 @@ export default function AboutStorySection({ className }: Props) {
             id="aboutstory-title"
             className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:w-[90%] lg:w-[70%] max-w-[975px] xs:leading-tight xl:leading-normal text-black"
           >
-            Our Story desktop
+            Our Story
           </p>
           <p
             id="aboutstory-body1"

@@ -404,7 +404,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
     );
   }
 
-
   useEffect(() => {
     if (size.width < 1024) {
       setIsMobileSize(true);
@@ -428,7 +427,7 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
               id="whatsetsusapart-title"
               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight xl:leading-normal text-black"
             >
-              What Sets Us Apart mobile
+              What Sets Us Apart
             </p>
             <p
               id="whatsetsusapart-subtitle"

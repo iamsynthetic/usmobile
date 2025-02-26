@@ -31,8 +31,6 @@ const Header = () => {
     <>
       <header className={`${styles.bgcolor} ${styles.setabove}`}>
         <Navbar />
-        <AlternateHero2 />
-        {/* <Missionstatement /> */}
       </header>
     </>
   );

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useWindowSize } from "usehooks-ts";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import AlternateHero from "./components/hero/AlternateHero2";
 import Plans from "./sections/section-plans/plans";
 import AboutStory from "./sections/section-about-story/about-story";
 import AboutStoryMobile from "./sections/section-about-story/about-story-mobile";
@@ -55,6 +56,11 @@ export default function Home() {
     <>
       <div className="main-content">
         <Header />
+      </div>
+      <div className="alternatehero">
+        <AlternateHero />
+      </div>
+      <div className="main-content">
         <Plans />
         {aboutstory}
         <CardsSlide />

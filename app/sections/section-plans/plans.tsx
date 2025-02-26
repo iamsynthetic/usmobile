@@ -3,7 +3,7 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import { useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
+import { useAppContext } from "../../context/index";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GoArrowRight } from "react-icons/go";
@@ -26,7 +26,9 @@ export default function PlansSection({ className }: Props) {
   const tl2 = useRef<GSAPTimeline | null>(null);
   const tl3 = useRef<GSAPTimeline | null>(null);
   const tl4 = useRef<GSAPTimeline | null>(null);
+  const tl5 = useRef<GSAPTimeline | null>(null);
 
+  const { setAbouttitleClicked, abouttitleClicked } = useAppContext();
   const [whichsubmenu, setWhichSubmenu] = useState(1);
 
   const menucolor = "#f2dcb3";
@@ -229,53 +231,34 @@ export default function PlansSection({ className }: Props) {
       ease: "Expo.easeInOut",
     });
 
-    // tl2.current = gsap
-    //   .timeline({
-    //     scrollTrigger: {
-    //       trigger: "#planscard-0",
-    //       pin: false,
-    //       start: "top 60%",
-    //     },
-    //   })
-    //   .to("#planscard-0", {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: -0.3,
-    //     ease: "Expo.easeInOut",
-    //   });
-
-    // tl3.current = gsap
-    //   .timeline({
-    //     scrollTrigger: {
-    //       trigger: "#planscard-1",
-    //       pin: false,
-    //       start: "top 60%",
-    //     },
-    //   })
-    //   .to("#planscard-1", {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: -0.3,
-    //     ease: "Expo.easeInOut",
-    //   });
-
-    // tl4.current = gsap
-    //   .timeline({
-    //     scrollTrigger: {
-    //       trigger: "#planscard-2",
-    //       pin: false,
-    //       start: "top 60%",
-    //     },
-    //   })
-    //   .to("#planscard-2", {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: -0.3,
-    //     ease: "Expo.easeInOut",
-    //   });
+    tl5.current = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-plans",
+        pin: false,
+        start: "-240px top",
+        end: "-150px",
+        // onLeave: () => {
+        //   setAbouttitleClicked(false);
+        //   console.log(
+        //     "plans - aboutclicktitle thing should be true: " + abouttitleClicked
+        //   );
+        // },
+        onEnter: () => {
+          setAbouttitleClicked(true);
+          console.log(
+            "plans - aboutclicktitle thing is should be false: " +
+              abouttitleClicked
+          );
+        },
+        onEnterBack: () => {
+          setAbouttitleClicked(false);
+          console.log(
+            "plans - aboutclicktitle thing is should be false: " +
+              abouttitleClicked
+          );
+        },
+      },
+    });
   });
 
   return (

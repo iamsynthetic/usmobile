@@ -18,7 +18,8 @@ const Navbar = () => {
   const size = useWindowSize();
   const pathname = usePathname();
   const [isPastHero, setIsPastHero] = useState(false);
-  const { scrolledPastHero } = useAppContext();
+  const { abouttitleClicked, scrolledPastHero, setInteractivevHovering } =
+    useAppContext();
 
   const menucolor = "#1a3073";
   const menuhovercolor = "#77b3d9";
@@ -130,6 +131,7 @@ const Navbar = () => {
   let isfirsttime = true;
 
   function navHover(element: string) {
+    setInteractivevHovering(true);
     gsap.to(element, {
       color: menuhovercolor,
       duration: 0.2,
@@ -138,6 +140,7 @@ const Navbar = () => {
   }
 
   function navLeave(element: string) {
+    setInteractivevHovering(false);
     gsap.to(element, {
       color: menucolor,
       duration: 0.2,
@@ -146,6 +149,7 @@ const Navbar = () => {
   }
 
   function navdropdownhover(element: string, item: string) {
+    setInteractivevHovering(true);
     gsap.to(element, {
       color: menuhovercolor,
       duration: 0.2,
@@ -161,6 +165,7 @@ const Navbar = () => {
   }
 
   function navdropdownleave(element: string, item: string) {
+    setInteractivevHovering(false);
     gsap.to(element, {
       color: menucolor,
       duration: 0.2,
@@ -169,6 +174,7 @@ const Navbar = () => {
   }
 
   function navbuttonhover(element: string, label: string, arrow: string) {
+    setInteractivevHovering(true);
     gsap.to(element, {
       color: menuhovercolor,
       duration: 0.3,
@@ -189,6 +195,7 @@ const Navbar = () => {
   }
 
   function navbuttonleave(element: string, label: string, arrow: string) {
+    setInteractivevHovering(false);
     gsap.to(element, {
       color: buttoncolor,
       duration: 0.3,
@@ -370,10 +377,18 @@ const Navbar = () => {
     } else if (isOpen === true) {
       mobileMenu(true);
     }
-    if (scrolledPastHero == true) {
+    // if (scrolledPastHero == true) {
+    //   ChangeNavColor("#000000");
+    //   setIsPastHero(false);
+    // } else if (scrolledPastHero == false) {
+    //   ChangeNavColor("#ffffff");
+    //   setIsPastHero(true);
+    // }
+    console.log("abouttitleClicked is: " + abouttitleClicked);
+    if (abouttitleClicked === true) {
       ChangeNavColor("#000000");
       setIsPastHero(false);
-    } else if (scrolledPastHero == false) {
+    } else if (abouttitleClicked === false) {
       ChangeNavColor("#ffffff");
       setIsPastHero(true);
     }
@@ -381,7 +396,7 @@ const Navbar = () => {
       setIsFirstMobileMenu(true);
       setOpen(false);
     }
-  }, [pathname, scrolledPastHero, isOpen, size.width]);
+  }, [abouttitleClicked, pathname, scrolledPastHero, isOpen, size.width]);
 
   if (isFirstMobileMenu === false) {
     mobilemenubackbutton = (
@@ -761,7 +776,7 @@ const Navbar = () => {
     );
   } else {
     template = (
-      <div className="flex justify-between h-20 items-center pl-4 pr-8 ">
+      <div className="flex justify-between h-20 items-center pl-4 pr-8">
         <Link href="/" className="z-10 mobilelogo">
           <div className={`${styles.buttoncolor}`}>
             <Image
@@ -808,7 +823,9 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${isPastHero ? `bg-[#ffffff] z-[1000]` : `bg-[#fffff]`} fixed max-w-[1440px] w-screen z-[1000]`}
+      className={`${
+        isPastHero ? `bg-transparent z-[1000]` : `bg-white`
+      } fixed max-w-[1440px] w-screen z-[1000]`}
     >
       {template}
     </div>

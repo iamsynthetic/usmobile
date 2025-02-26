@@ -1,0 +1,55 @@
+/*---------------------------------- colors ----------------------------------*/
+
+$color-cream: #f2dcb3; /* hex */
+$color-red: #d9042b; /* hex */
+$color-lightblue: #77b3d9; /* hex */
+$color-greyblue: #e5f2f9; /* hex */
+$color-darkblue: #1a3073; /* hex */
+
+$bg-cream: rgba($color-cream, 1);
+$bg-red: rgba($color-red, 1);
+$bg-lightblue: rgba($color-lightblue, 1);
+$bg-greyblue: rgba($color-greyblue, 1);
+$bg-darkblue: rgba($color-darkblue, 1);
+
+/*---------------------------------- end colors ----------------------------------*/
+.freetrialfollower {
+  font-size: 14px;
+  background-color: $color-darkblue;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+}
+
+.freetrialtxt {
+  padding-left: 2%;
+  padding-top: 16%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $color-cream;
+}
+
+.cssfix {
+  white-space: pre-wrap;
+}
+
+.allononeline {
+  width: max-content;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}

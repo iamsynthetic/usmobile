@@ -16,15 +16,14 @@ $bg-darkblue: rgba($color-darkblue, 1);
 
 /*------------------------------------------------------------------------ content ------------------------------------------------------------------------*/
 
+.zin {
+  z-index: 1;
+}
 .gsap {
   will-change: transform;
 }
 .herotitle {
   font-size: 7vw;
-}
-.bgcolor {
-  // background-color: $color-greyblue;
-  // background-color: $color-greyblue;
 }
 .thebutton {
   background-color: $bg-cream;

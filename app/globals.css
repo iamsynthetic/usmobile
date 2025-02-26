@@ -223,7 +223,10 @@ $color-lightgrey: #e9e9e9;
   color: var(--dark);
   background: var(--accent);
 }
-
+.layout-followcursor {
+  position: absolute;
+  z-index: 1;
+}
 body {
   height: 100%;
   margin: 0;
@@ -232,10 +235,16 @@ body {
 }
 
 .main-content {
+  z-index: 100;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   background-color: #ffffff;
+}
+
+.alternatehero {
+  z-index: 99;
+  background-color: red;
 }
 
 .section-minheight {

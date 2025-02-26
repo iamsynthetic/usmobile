@@ -202,12 +202,12 @@ export default function CardsSlide() {
     <>
       <div className={`${styles.slidingimages} max-w-[1440px] bg-green-200`}>
         <div className="w-screen h-[max-content]">
-          <div className="flex flex-col xs:ml-4 xs:mr-8 lg:px-12 ">
+          <div className="flex flex-col xs:ml-4 xs:mr-8 lg:px-12 w-[80%]">
             <section
               id="section2"
               className={`${styles.asection} ${styles.stickycards} sticky-cards w-full h-[100vh]`}
             >
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full bg-red-300">
                 <div className="mt-[104px] lexend xs:text-[28px] md:text-[48px] xs:w-[90%] lg:w-[70%] max-w-[975px] xs:leading-tight xl:leading-normal text-black">
                   Recommended By
                 </div>

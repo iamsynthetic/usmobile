@@ -1,9 +1,7 @@
 "use client";
 import clsx from "clsx";
-import styles from "./styles.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
-// import { useAppContext } from "../../../context";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

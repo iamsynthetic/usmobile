@@ -17,7 +17,6 @@ function ThemeSwitch() {
     } else {
       setthememode("light");
     }
-    //setthememode(theme)
   };
 
   useEffect(() => {

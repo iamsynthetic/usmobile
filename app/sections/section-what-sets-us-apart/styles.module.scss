@@ -17,19 +17,11 @@ $bg-darkblue: rgba($color-darkblue, 1);
 /*------------------------------------------------------------------------ content ------------------------------------------------------------------------*/
 
 .mobileimage {
-  // object-fit: contain;
-  // width: 100% !important;
-  // height: 647px;
-  // width: 90vw;
   position: relative !important;
   margin-top: 0px;
-  // height: unset !important;
 }
 
 .tabbutton {
-  // background-color: $bg-cream;
-  // border-radius: 6px;
-  // border: none;
   color: black;
   padding: 6px 8px 6px 8px;
   text-align: center;
@@ -52,28 +44,5 @@ $bg-darkblue: rgba($color-darkblue, 1);
 /*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
-// @supports (contain: paint) and (not (-moz-appearance: none)) {
-//   .missionsection {
-//     margin-bottom: 0px;
-//   }
-//   .secrets {
-//     color: $color-red;
-//   }
-// }
 
-// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
-//   .missionsection {
-//     margin-bottom: 0px;
-//   }
-//   .secrets {
-//     color: $color-red;
-//   }
-// }
-// /* laptop */
-// @media only screen and (max-height: 800px) {
-//   .missionsection {
-//     margin-top: 20vh;
-//     // background-color: red;
-//   }
-// }
 /*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

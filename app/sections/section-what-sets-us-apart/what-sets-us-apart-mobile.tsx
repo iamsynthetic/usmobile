@@ -1,21 +1,17 @@
 "use client";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
 import Image from "next/image";
 import { useWindowSize } from "usehooks-ts";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { IoChevronForward, IoChevronBack } from "react-icons/io5";
 
 type Props = { className?: string };
 
 export default function WhatSetsUsApartMobileSection({ className }: Props) {
   const size = useWindowSize();
   const [showChevron, setShowChevron] = useState(false);
-  const menucolor = "#f2dcb3";
   const menuhovercolor = "#d9042b";
   const buttoncolor = "#000000";
   const [isMobileSize, setIsMobileSize] = useState(false);
@@ -130,8 +126,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
     gsap.to("#whatsetsusapart-videoimage", {
       opacity: 0,
       y: +5,
-      // scaleX: 0.9,
-      // scaleY: 0.9,
       duration: 0.2,
       ease: "Back.easeInOut",
       onComplete: function () {
@@ -145,8 +139,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
     gsap.to("#whatsetsusapart-videoimage", {
       opacity: 1,
       y: 1,
-      // scaleX: 1,
-      // scaleY: 1,
       duration: 0.2,
       ease: "Back.easeInOut",
     });
@@ -541,16 +533,7 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
           <div
             id="whatsetsusapart-videoimage"
             className={`${styles.mobilevidzindex}`}
-          >
-            {/* <Image
-              src={img.src}
-              alt={img.alt}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-auto rounded-2xl"
-            /> */}
-          </div>
+          ></div>
           {thevideoimagetoshow}
           <div
             className={`${styles.mobilevidmenuzindex} flex flex-row justify-center w-full`}
@@ -582,15 +565,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
               >
                 <div>
                   <span className="flex thespeedlabel">SPEED</span>
-                  {/* <span
-                    className={
-                      showChevron
-                        ? `block opacity-0 mt-1 chevronspeed`
-                        : `hidden mt-1 chevronspeed`
-                    }
-                  >
-                    <IoChevronForward />
-                  </span> */}
                 </div>
               </div>
               <div
@@ -613,15 +587,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
               >
                 <div>
                   <span className="flex thevslabel">VS OTHERS</span>
-                  {/* <span
-                    className={
-                      showChevron
-                        ? `block opacity-0 mt-1 chevronvs`
-                        : `hidden mt-1 chevronvs`
-                    }
-                  >
-                    <IoChevronForward />
-                  </span> */}
                 </div>
               </div>
               <div
@@ -652,15 +617,6 @@ export default function WhatSetsUsApartMobileSection({ className }: Props) {
               >
                 <div>
                   <span className="flex theunlimitedlabel">UNLIMITED</span>
-                  {/* <span
-                    className={
-                      showChevron
-                        ? `block opacity-0 mt-1 chevronunlimited`
-                        : `hidden mt-1 chevronunlimited`
-                    }
-                  >
-                    <IoChevronForward />
-                  </span> */}
                 </div>
               </div>
             </div>

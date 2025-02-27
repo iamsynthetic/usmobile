@@ -1,43 +1,23 @@
 "use client";
 
-import styles from "./styles.module.scss";
-import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useAppContext } from "../../context";
+import React, { useRef, useState } from "react";
 import { CustomEase } from "gsap/dist/CustomEase";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Background from "../../../public/images/hero/heroimg1.jpg";
-import { SplitText } from "@splittext/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { GoArrowRight } from "react-icons/go";
-import Hero from "./Hero";
-import FollowCursor from "../follow-cursor/follow-cursor";
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function AlternateHero2() {
-  // const [isMobileSize, setIsMobileSize] = useState(false);
-  // let template;
-  // let thevideoimagetoshow;
-  const [isMounted, setIsMounted] = useState(false);
-
-  const { isPreloading, setIsPreloading } = useAppContext();
-  const [thevideoimage, setThevideoimage] = useState(1);
-  const { setScrolledPastHero } = useAppContext();
-  const pathname = usePathname();
-  const tl1 = useRef > null;
+export default function Hero() {
+  const container = useRef();
+  const { scrollYProgress } = useScroll({
+    target: container.current,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "700vh"]);
   const tl2 = useRef(null);
-
-  const backgroundref = useRef(null);
-  const imageref = useRef(null);
-  const headlineref = useRef(null);
-  const subheadref = useRef(null);
-  const bodytxtref = useRef(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -48,73 +28,6 @@ export default function AlternateHero2() {
 
     gsap.set(".txt1", { y: +100 });
     gsap.set(".txt2", { y: +100 });
-    // if (tl2.current) {
-    //   tl2.current = gsap
-    //     .timeline()
-    //     .fromTo(
-    //       ".text-container",
-    //       {
-    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-    //       },
-    //       {
-    //         duration: 1.25,
-    //         delay: 3,
-    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    //         ease: "Expo.easeInOut",
-    //       }
-    //     )
-    //     .to(".txt1", {
-    //       y: 0,
-    //       duration: 1,
-    //       delay: -1,
-    //       ease: "Expo.easeInOut",
-    //     })
-    //     .fromTo(
-    //       ".text-container2",
-    //       {
-    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-    //       },
-    //       {
-    //         duration: 1,
-    //         delay: -0.9,
-    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    //         ease: "Expo.easeInOut",
-    //       }
-    //     )
-    //     .to(".txt2", {
-    //       y: 0,
-    //       duration: 1,
-    //       delay: -1,
-    //       ease: "Expo.easeInOut",
-    //     });
-    // }
-    // if (tl1.current) {
-    //   tl1.current = gsap.timeline().to(".thewhitebglayer", {
-    //     scaleY: 1,
-    //     duration: 1.25,
-    //     delay: 4,
-    //     ease: "Expo.easeInOut",
-    //   });
-    //   tl1.current
-    //     .fromTo(
-    //       backgroundref.current,
-    //       {
-    //         clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-    //       },
-    //       {
-    //         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-    //         duration: 1,
-    //         delay: -1,
-    //         ease: "Quint.easeInOut",
-    //       }
-    //     )
-    //     .from(imageref.current, {
-    //       y: "50vh",
-    //       duration: 1,
-    //       delay: -1,
-    //       ease: "Quint.easeInOut",
-    //     });
-    // }
 
     if (tl2.current) {
       tl2.current = gsap
@@ -139,13 +52,6 @@ export default function AlternateHero2() {
         });
     }
   });
-
-  const container = useRef();
-  const { scrollYProgress } = useScroll({
-    target: container.current,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "700vh"]);
 
   return (
     <>
@@ -186,45 +92,6 @@ export default function AlternateHero2() {
                 always connected no matter where you are.
               </motion.p>
               <motion.div className="text-center">
-          <div
-           style={{ y }}
-           initial={{ opacity: 0, y: 200 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{
-             type: "tween",
-             ease: [0, 0.71, 0.2, 1.01],
-             delay: 3.3,
-             duration: 0.6,
-           }}
-            id="signup-button"
-            className={`${styles.thebutton} signuplearnmorebtn spacegrotesklight mt-6`}
-            onMouseEnter={() => {
-              navbuttonhover(
-                ".signuplearnmorebtn",
-                ".signuplearnmorelabel",
-                ".signupllearnmorearrow"
-              );
-            }}
-            onMouseLeave={() => {
-              navbuttonleave(
-                ".signuplearnmorebtn",
-                ".signuplearnmorelabel",
-                ".signupllearnmorearrow"
-              );
-            }}
-          >
-            <Link
-              href="https://app.usmobile.com/dashboard/auth?signup=true&redirectTo=/dashboard/app/new-plan-checkout&utm_page_url=/"
-              target="_blank"
-            >
-              <span className="flex signuplearnmorelabel">
-                GET STARTED{" "}
-                <span className="signuplearnmorearrow ml-[3px] mt-[2px]">
-                  <GoArrowRight />
-                </span>
-              </span>
-            </Link>
-          </div>
         </motion.div>
             </div>
             <div className="flex flex-row xs:mt-[4vh] lg:mt-[2vh] w-[100%]">

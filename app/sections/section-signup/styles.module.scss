@@ -32,28 +32,5 @@ $bg-darkblue: rgba($color-darkblue, 1);
 /*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
-// @supports (contain: paint) and (not (-moz-appearance: none)) {
-//   .missionsection {
-//     margin-bottom: 0px;
-//   }
-//   .secrets {
-//     color: $color-red;
-//   }
-// }
 
-// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
-//   .missionsection {
-//     margin-bottom: 0px;
-//   }
-//   .secrets {
-//     color: $color-red;
-//   }
-// }
-// /* laptop */
-// @media only screen and (max-height: 800px) {
-//   .missionsection {
-//     margin-top: 20vh;
-//     // background-color: red;
-//   }
-// }
 /*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

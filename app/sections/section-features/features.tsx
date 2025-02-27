@@ -3,9 +3,7 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-// import { useAppContext } from "../../../context";
 import Image from "next/image";
-// import { useWindowSize } from "usehooks-ts";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GoArrowRight } from "react-icons/go";
@@ -13,11 +11,9 @@ import { GoArrowRight } from "react-icons/go";
 type Props = { className?: string };
 
 export default function FeaturesSection({ className }: Props) {
-  // const size = useWindowSize();
   const menucolor = "#f2dcb3";
   const menuhovercolor = "#1a3073";
   const buttoncolor = "#000000";
-  // const [isMobileSize, setIsMobileSize] = useState(false);
   const tl1 = useRef<GSAPTimeline | null>(null);
   const tl2 = useRef<GSAPTimeline | null>(null);
   const tl3 = useRef<GSAPTimeline | null>(null);
@@ -36,27 +32,21 @@ export default function FeaturesSection({ className }: Props) {
   const tl20 = useRef<GSAPTimeline | null>(null);
   const tl21 = useRef<GSAPTimeline | null>(null);
   const tl22 = useRef<GSAPTimeline | null>(null);
-  const tl23 = useRef<GSAPTimeline | null>(null);
-  let template;
 
   function buttonhover(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menuhovercolor,
-      // scaleX: 1.1,
-      // scaleY: 1.1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: menucolor,
-      // x: +4,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: menucolor,
-      // x: -2,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
@@ -66,20 +56,16 @@ export default function FeaturesSection({ className }: Props) {
   function buttonleave(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menucolor,
-      // scaleX: 1,
-      // scaleY: 1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeOut",
@@ -435,558 +421,6 @@ export default function FeaturesSection({ className }: Props) {
     });
   });
 
-  // if (isMobileSize === false) {
-  //   template = (
-  //     <div className="flex flex-row max-w-[1440px] px-12">
-  //       <div className="flex flex-col w-screen ">
-  //         <div className="flex flex-row ">
-  //           <div className="flex-grow">
-  //             <p
-  //               id="features-feature1-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               International
-  //               <br />
-  //               Features Like No Other
-  //             </p>
-  //             <p
-  //               id="features-feature1-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               Roam in over 180 countries, travel with ease. Use your US number
-  //               in over 180 countries for data, calls and texts.
-  //             </p>
-  //             <div
-  //               id="features-feature1-button1"
-  //               className={`${styles.thebutton} features1learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features1learnmorebtn",
-  //                   ".features1learnmorelabel",
-  //                   ".features1llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features1learnmorebtn",
-  //                   ".features1learnmorelabel",
-  //                   ".features1learnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link
-  //                 href="https://www.usmobile.com/international-roaming-phone-plans"
-  //                 target="_blank"
-  //               >
-  //                 <span className="flex features1learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features1learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //             <p
-  //               id="features-feature1-body2"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               International calls and texts call and text from the US to over
-  //               200&nbsp;destinations.
-  //             </p>
-  //             <div
-  //               id="features-feature1-button2"
-  //               className={`${styles.thebutton} features2learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features2learnmorebtn",
-  //                   ".features2learnmorelabel",
-  //                   ".features2llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features2learnmorebtn",
-  //                   ".features2learnmorelabel",
-  //                   ".features2llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link
-  //                 href="https://www.usmobile.com/international-calling"
-  //                 target="_blank"
-  //               >
-  //                 <span className="flex features2learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features2learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //           <div id="features-feature1-image" className="min-w-[530px]">
-  //             <Image
-  //               src={"/images/features/international.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of luggage on top of a car"
-  //               priority={true}
-  //             />
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-row w-[100%] mt-[150px] ">
-  //           <div id="features-feature2-image" className="min-w-[530px]">
-  //             <Image
-  //               src={"/images/features/most.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of woman behind a blue background"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow">
-  //             <p
-  //               id="features-feature2-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:ml-16 xs:leading-tight text-black"
-  //             >
-  //               {/* The&nbsp;‘Most’&nbsp;That Matters&nbsp;Most */}
-  //               The ‘Most’
-  //               <br />
-  //               That Matters Most
-  //             </p>
-  //             <p
-  //               id="features-feature2-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:ml-16 xs:mt-6 leading-tight text-black"
-  //             >
-  //               No carrier has modernized connectivity quite like us. But don’t
-  //               just take our word for it, here’s what six happy customers have
-  //               to say about the features and perks they love most.
-  //             </p>
-  //             <div
-  //               id="features-feature2-button"
-  //               className={`${styles.thebutton} features3learnmorebtn spacegrotesklight xs:ml-16 mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features3learnmorebtn",
-  //                   ".features3learnmorelabel",
-  //                   ".features3llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features3learnmorebtn",
-  //                   ".features3learnmorelabel",
-  //                   ".features3llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/videos" target="_blank">
-  //                 <span className="flex features3learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features3learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-row w-[100%] mt-[150px] ">
-  //           <div className="flex-grow">
-  //             <p
-  //               id="features-feature3-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               Boundless Connectivity
-  //             </p>
-  //             <p
-  //               id="features-feature3-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               We're proud to give you top tier wireless that goes the distance
-  //               without breaking the bank. Whether you're exploring city streets
-  //               or scaling mountain peaks, we ensure you have what you need,
-  //               wherever your adventures lead.
-  //             </p>
-  //             <div
-  //               id="features-feature3-button"
-  //               className={`${styles.thebutton} features4learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features4learnmorebtn",
-  //                   ".features4learnmorelabel",
-  //                   ".features4llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features4learnmorebtn",
-  //                   ".features4learnmorelabel",
-  //                   ".features4llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/networks" target="_blank">
-  //                 <span className="flex features4learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features4learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //           <div id="features-feature3-image" className="min-w-[530px]">
-  //             <Image
-  //               src={"/images/features/connectivity.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of new york skyline"
-  //               priority={true}
-  //             />
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-row w-[100%] mt-[150px] ">
-  //           <div id="features-feature4-image" className="min-w-[530px]">
-  //             <Image
-  //               src={"/images/features/stayadventurous.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of person holding a phone outside"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow">
-  //             <p
-  //               id="features-feature4-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:ml-16 xs:leading-tight text-black"
-  //             >
-  //               {/* Stay&nbsp;adventurous Stay&nbsp;connected */}
-  //               Stay adventurous
-  //               <br />
-  //               Stay connected
-  //             </p>
-  //             <p
-  //               id="features-feature4-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:ml-16 xs:mt-6 leading-tight text-black"
-  //             >
-  //               US Mobile delivers on everything you need, everywhere you need
-  //               it.
-  //             </p>
-  //             <div
-  //               id="features-feature4-button"
-  //               className={`${styles.thebutton} features5learnmorebtn spacegrotesklight xs:ml-16 mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features5learnmorebtn",
-  //                   ".features5learnmorelabel",
-  //                   ".features5llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features5learnmorebtn",
-  //                   ".features5learnmorelabel",
-  //                   ".features5llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/" target="_blank">
-  //                 <span className="flex features5learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features5learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // } else {
-  //   template = (
-  //     <div className="flex flex-col px-4">
-  //       <div className="flex flex-col">
-  //         <div className="flex flex-col ">
-  //           <div id="features-feature1-image" className="min-w-[100px]">
-  //             <Image
-  //               className="w-full"
-  //               src={"/images/features/international.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of luggage on top of a car"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow md:max-w-[800px] mt-6">
-  //             <p
-  //               id="features-feature1-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               International lll
-  //               <br />
-  //               Features Like No Other
-  //             </p>
-  //             <p
-  //               id="features-feature1-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               Roam in over 180 countries, travel with ease. Use your US number
-  //               in over 180 countries for data, calls and texts.
-  //             </p>
-  //             <div
-  //               id="features-feature1-button1"
-  //               className={`${styles.thebutton} features1learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features1learnmorebtn",
-  //                   ".features1learnmorelabel",
-  //                   ".features1llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features1learnmorebtn",
-  //                   ".features1learnmorelabel",
-  //                   ".features1llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link
-  //                 href="https://www.usmobile.com/international-roaming-phone-plans"
-  //                 target="_blank"
-  //               >
-  //                 <span className="flex features1learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features1learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //             <p
-  //               id="features-feature1-body2"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               International calls and texts call and text from the US to over
-  //               200&nbsp;destinations.
-  //             </p>
-  //             <div
-  //               id="features-feature1-button2"
-  //               className={`${styles.thebutton} features2learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features2learnmorebtn",
-  //                   ".features2learnmorelabel",
-  //                   ".features2llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features2learnmorebtn",
-  //                   ".features2learnmorelabel",
-  //                   ".features2llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link
-  //                 href="https://www.usmobile.com/international-calling"
-  //                 target="_blank"
-  //               >
-  //                 <span className="flex features2learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features2learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-col mt-[150px]">
-  //           <div id="features-feature2-image" className="min-w-[100px]">
-  //             <Image
-  //               className="w-[100%]"
-  //               src={"/images/features/most.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of woman behind a blue background"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow md:max-w-[800px] mt-6">
-  //             <p
-  //               id="features-feature2-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               The ‘Most’
-  //               <br />
-  //               That Matters Most
-  //             </p>
-  //             <p
-  //               id="features-feature2-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 leading-tight text-black"
-  //             >
-  //               No carrier has modernized connectivity quite like us. But don’t
-  //               just take our word for it, here’s what six happy customers have
-  //               to say about the features and perks they love most.
-  //             </p>
-  //             <div
-  //               id="features-feature2-button"
-  //               className={`${styles.thebutton} features3learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features3learnmorebtn",
-  //                   ".features3learnmorelabel",
-  //                   ".features3llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features3learnmorebtn",
-  //                   ".features3learnmorelabel",
-  //                   ".features3llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/videos" target="_blank">
-  //                 <span className="flex features3learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features3learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-col mt-[150px] ">
-  //           <div id="features-feature3-image" className="min-w-[100px]">
-  //             <Image
-  //               className="w-[100%]"
-  //               src={"/images/features/connectivity.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of new york skyline"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow md:max-w-[800px] mt-6">
-  //             <p
-  //               id="features-feature3-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               Boundless Connectivity
-  //             </p>
-  //             <p
-  //               id="features-feature3-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 mr-20 leading-tight text-black"
-  //             >
-  //               We're proud to give you top tier wireless that goes the distance
-  //               without breaking the bank. Whether you're exploring city streets
-  //               or scaling mountain peaks, we ensure you have what you need,
-  //               wherever your adventures lead.
-  //             </p>
-  //             <div
-  //               id="features-feature3-button"
-  //               className={`${styles.thebutton} features4learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".features4learnmorebtn",
-  //                   ".features4learnmorelabel",
-  //                   ".features4llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features4learnmorebtn",
-  //                   ".features4learnmorelabel",
-  //                   ".features4llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/networks" target="_blank">
-  //                 <span className="flex features4learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features4learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //         <div className="flex flex-col mt-[150px] ">
-  //           <div id="features-feature4-image" className="min-w-[100px]">
-  //             <Image
-  //               className="w-[100%]"
-  //               src={"/images/features/stayadventurous.png"}
-  //               width="611"
-  //               height="400"
-  //               alt="image of person holding a phone outside"
-  //               priority={true}
-  //             />
-  //           </div>
-  //           <div className="flex-grow md:max-w-[800px]">
-  //             <p
-  //               id="features-feature4-title"
-  //               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
-  //             >
-  //               Stay adventurous
-  //               <br />
-  //               Stay connected
-  //             </p>
-  //             <p
-  //               id="features-feature4-body"
-  //               className="sectionbigbodytxt xs:text-[18px] md:text-[20px] xs:mt-6 leading-tight text-black"
-  //             >
-  //               US Mobile delivers on everything you need, everywhere you need
-  //               it.
-  //             </p>
-  //             <div
-  //               id="features-feature4-button"
-  //               className={`${styles.thebutton} features5learnmorebtn spacegrotesklight mt-4`}
-  //               onMouseEnter={() => {
-  //                 buttonhover(
-  //                   ".hfeatures5earnmorebtn",
-  //                   ".features5learnmorelabel",
-  //                   ".features5llearnmorearrow"
-  //                 );
-  //               }}
-  //               onMouseLeave={() => {
-  //                 buttonleave(
-  //                   ".features5learnmorebtn",
-  //                   ".features5learnmorelabel",
-  //                   ".features5llearnmorearrow"
-  //                 );
-  //               }}
-  //             >
-  //               <Link href="https://www.usmobile.com/" target="_blank">
-  //                 <span className="flex features5learnmorelabel">
-  //                   LEARN MORE{" "}
-  //                   <span className="features5learnmorearrow ml-[3px] mt-[2px]">
-  //                     <GoArrowRight />
-  //                   </span>
-  //                 </span>
-  //               </Link>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
-  // useEffect(() => {
-  //   if (size.width < 1024) {
-  //     setIsMobileSize(true);
-  //   } else {
-  //     setIsMobileSize(false);
-  //   }
-  // }, [size.width]);
-
   return (
     <section
       className={clsx("section-features mt-[150px] max-w-[1440px]", className)}
@@ -1105,7 +539,6 @@ export default function FeaturesSection({ className }: Props) {
                   id="features-feature2-title"
                   className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:ml-16 xs:leading-tight text-black"
                 >
-                  {/* The&nbsp;‘Most’&nbsp;That Matters&nbsp;Most */}
                   The ‘Most’
                   <br />
                   That Matters Most
@@ -1221,7 +654,6 @@ export default function FeaturesSection({ className }: Props) {
                   id="features-feature4-title"
                   className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:ml-16 xs:leading-tight text-black"
                 >
-                  {/* Stay&nbsp;adventurous Stay&nbsp;connected */}
                   Stay adventurous
                   <br />
                   Stay connected

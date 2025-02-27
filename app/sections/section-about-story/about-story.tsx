@@ -2,7 +2,6 @@
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { useEffect, useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
 import Image from "next/image";
 import { useWindowSize } from "usehooks-ts";
 import gsap from "gsap";
@@ -15,10 +14,6 @@ export default function AboutStorySection({ className }: Props) {
   const [isMobileSize, setIsMobileSize] = useState(false);
 
   const tl1 = useRef<GSAPTimeline | null>(null);
-  const tl2 = useRef<GSAPTimeline | null>(null);
-  const tl3 = useRef<GSAPTimeline | null>(null);
-  const tl4 = useRef<GSAPTimeline | null>(null);
-  const tl5 = useRef<GSAPTimeline | null>(null);
 
   useGSAP(() => {
     gsap.set("#aboutstory-title", {
@@ -46,7 +41,6 @@ export default function AboutStorySection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-title",
         pin: false,
-        // markers: true,
         start: "top 50%",
       },
     });
@@ -63,7 +57,6 @@ export default function AboutStorySection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-image",
         pin: false,
-        // markers: true,
         start: "top 50%",
       },
     });
@@ -80,7 +73,6 @@ export default function AboutStorySection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body1",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });
@@ -97,7 +89,6 @@ export default function AboutStorySection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body2",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });
@@ -114,7 +105,6 @@ export default function AboutStorySection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body3",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });
@@ -237,7 +227,6 @@ export default function AboutStorySection({ className }: Props) {
   }
 
   useEffect(() => {
-    // setIsClient(true);
     if (size.width < 1024) {
       setIsMobileSize(true);
     } else {
@@ -253,8 +242,6 @@ export default function AboutStorySection({ className }: Props) {
       )}
       id="aboutstory"
     >
-      {/* <div className="h-[max-content]">{template}</div> */}
-      {/* {template} */}
       <div className="flex flex-row max-w-[1440px] px-12">
         <div className="flex-grow">
           <p

@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-$color-orange: #f2be5c;
-$color-green: #60d994;
-$color-purple: #c47ed9;
-$color-red: #d8446b;
-$color-blue: #5fa0ee;
-$color-darkgrey: #4e534c;
-$color-grey: #a9a9a9;
-$color-mediumdarkgrey: #bfc0ae;
-$color-mediumgrey: #d0cccc;
-$color-lightgrey: #e9e9e9;
-*/
-
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -149,10 +136,6 @@ $color-lightgrey: #e9e9e9;
   color-scheme: light;
   color: var(--dark);
   background-color: var(--light);
-
-  /* need to change all colours to be light versions */
-  /* --primary: rgb(231, 121, 193); */
-  --neutral: rgb(34, 21, 81);
   --neutralhover: rgb(121, 83, 255);
   --btn-neutral-text: rgb(249, 247, 253);
   --border: #dcd7e5;
@@ -161,18 +144,11 @@ $color-lightgrey: #e9e9e9;
   color-scheme: dark;
   color: var(--light);
   background-color: var(--dark);
-
-  /* need to change all colours to be dark versions */
-  /* --primary: rgb(212, 38, 152); */
   --neutral: rgb(249, 247, 253);
   --neutralhover: rgb(227, 225, 230);
   --btn-neutral-text: rgb(34, 21, 81);
   --border: #49515b;
 }
-/* .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
-} */
 
 .btn-neutral {
   color: var(--btn-neutral-text);
@@ -191,7 +167,6 @@ $color-lightgrey: #e9e9e9;
 }
 .nav-hover:hover {
   color: var(--success);
-  /* text-decoration: underline; */
 }
 .sectiontitletxt {
   color: black;
@@ -234,7 +209,6 @@ body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  /* background-color: #e5f2f9; */
   background-color: #ffffff;
 }
 

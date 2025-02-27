@@ -3,7 +3,7 @@ import { useAppContext } from "../context";
 
 function UIColorCheck() {
   const { thememode, setthememode } = useAppContext();
-  
+
   let switchit = "dracula";
 
   if (thememode === "dark") {
@@ -11,10 +11,8 @@ function UIColorCheck() {
   } else {
     switchit = "dracula";
   }
-
-  // return switchit;
 }
 
-export function switchit(){
-  return switchit
+export function switchit() {
+  return switchit;
 }

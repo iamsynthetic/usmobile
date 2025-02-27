@@ -1,8 +1,7 @@
 "use client";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-import { useEffect, useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
+import { useRef } from "react";
 import Image from "next/image";
 import { useWindowSize } from "usehooks-ts";
 import gsap from "gsap";
@@ -12,13 +11,8 @@ type Props = { className?: string };
 
 export default function AboutStoryMobileSection({ className }: Props) {
   const size = useWindowSize();
-  const [isMobileSize, setIsMobileSize] = useState(false);
 
   const tl1 = useRef<GSAPTimeline | null>(null);
-  const tl2 = useRef<GSAPTimeline | null>(null);
-  const tl3 = useRef<GSAPTimeline | null>(null);
-  const tl4 = useRef<GSAPTimeline | null>(null);
-  const tl5 = useRef<GSAPTimeline | null>(null);
 
   useGSAP(() => {
     gsap.set("#aboutstory-title", {
@@ -46,7 +40,6 @@ export default function AboutStoryMobileSection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-title",
         pin: false,
-        // markers: true,
         start: "top 50%",
       },
     });
@@ -63,7 +56,6 @@ export default function AboutStoryMobileSection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-image",
         pin: false,
-        // markers: true,
         start: "top 50%",
       },
     });
@@ -80,7 +72,6 @@ export default function AboutStoryMobileSection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body1",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });
@@ -97,7 +88,6 @@ export default function AboutStoryMobileSection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body2",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });
@@ -114,7 +104,6 @@ export default function AboutStoryMobileSection({ className }: Props) {
       scrollTrigger: {
         trigger: "#aboutstory-body3",
         pin: false,
-        // markers: true,
         start: "top 70%",
       },
     });

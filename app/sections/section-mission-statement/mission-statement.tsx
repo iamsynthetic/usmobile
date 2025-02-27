@@ -1,8 +1,6 @@
 "use client";
 import clsx from "clsx";
-import styles from "./styles.module.scss";
-import { useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

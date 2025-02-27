@@ -2,7 +2,7 @@
 import Preloader from "./Preloader";
 import { useAppContext } from "../../context";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function PreloaderContainer() {
   const { isPreloading, setIsPreloading } = useAppContext();

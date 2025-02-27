@@ -1,23 +1,16 @@
 "use client";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
-// import { useAppContext } from "../../../context";
 import Image from "next/image";
-import { useWindowSize } from "usehooks-ts";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { GoArrowRight } from "react-icons/go";
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 type Props = { className?: string };
 
 export default function PerksMobileSection({ className }: Props) {
-  const size = useWindowSize();
-  const menucolor = "#f2dcb3";
-  const menuhovercolor = "#1a3073";
-  const buttoncolor = "#000000";
   const tl1 = useRef<GSAPTimeline | null>(null);
   const tl2 = useRef<GSAPTimeline | null>(null);
   const tl3 = useRef<GSAPTimeline | null>(null);
@@ -38,56 +31,6 @@ export default function PerksMobileSection({ className }: Props) {
   const tl16 = useRef<GSAPTimeline | null>(null);
   const tl17 = useRef<GSAPTimeline | null>(null);
   const tl18 = useRef<GSAPTimeline | null>(null);
-  // const [isMobileSize, setIsMobileSize] = useState(false);
-
-  // let template;
-
-  function buttonhover(element: string, label: string, arrow: string) {
-    gsap.to(element, {
-      backgroundColor: menuhovercolor,
-      // scaleX: 1.1,
-      // scaleY: 1.1,
-      duration: 0.5,
-      ease: "Expo.easeInOut",
-    });
-    gsap.to(label, {
-      color: menucolor,
-      // x: +4,
-      duration: 0.3,
-      delay: 0,
-      ease: "Expo.easeInOut",
-    });
-    gsap.to(arrow, {
-      color: menucolor,
-      // x: -2,
-      duration: 0.3,
-      delay: 0,
-      ease: "Expo.easeInOut",
-    });
-  }
-
-  function buttonleave(element: string, label: string, arrow: string) {
-    gsap.to(element, {
-      backgroundColor: menucolor,
-      // scaleX: 1,
-      // scaleY: 1,
-      duration: 0.5,
-      ease: "Expo.easeInOut",
-    });
-    gsap.to(label, {
-      color: buttoncolor,
-      // x: 0,
-      duration: 0.3,
-      ease: "Expo.easeInOut",
-    });
-    gsap.to(arrow, {
-      color: buttoncolor,
-      // x: 0,
-      duration: 0.3,
-      delay: 0,
-      ease: "Expo.easeOut",
-    });
-  }
 
   useGSAP(() => {
     gsap.set(

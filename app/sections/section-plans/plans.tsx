@@ -2,18 +2,15 @@
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useAppContext } from "../../context/index";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GoArrowRight } from "react-icons/go";
 import { FaCheckCircle } from "react-icons/fa";
-import { cn } from "@/lib/utils";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -28,8 +25,7 @@ export default function PlansSection({ className }: Props) {
   const tl4 = useRef<GSAPTimeline | null>(null);
   const tl5 = useRef<GSAPTimeline | null>(null);
 
-  const { setAbouttitleClicked, abouttitleClicked } = useAppContext();
-  const [whichsubmenu, setWhichSubmenu] = useState(1);
+  const { setPlanssectionInView } = useAppContext();
 
   const menucolor = "#f2dcb3";
   const menuhovercolor = "#1a3073";
@@ -237,25 +233,11 @@ export default function PlansSection({ className }: Props) {
         pin: false,
         start: "-240px top",
         end: "-150px",
-        // onLeave: () => {
-        //   setAbouttitleClicked(false);
-        //   console.log(
-        //     "plans - aboutclicktitle thing should be true: " + abouttitleClicked
-        //   );
-        // },
         onEnter: () => {
-          setAbouttitleClicked(true);
-          console.log(
-            "plans - aboutclicktitle thing is should be false: " +
-              abouttitleClicked
-          );
+          setPlanssectionInView(true);
         },
         onEnterBack: () => {
-          setAbouttitleClicked(false);
-          console.log(
-            "plans - aboutclicktitle thing is should be false: " +
-              abouttitleClicked
-          );
+          setPlanssectionInView(false);
         },
       },
     });
@@ -331,7 +313,6 @@ export default function PlansSection({ className }: Props) {
                               className=" spacegroteskbold text-xl"
                               key={item.id}
                             >
-                              {/* <h1 className="text-black">{item.submenu}</h1> */}
                               {item.submenu.map((subitem, index) => {
                                 return (
                                   <div

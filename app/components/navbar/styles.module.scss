@@ -39,10 +39,6 @@ $bg-darkblue: rgba($color-darkblue, 1);
 }
 .logo {
   display: block;
-  // position: absolute;
-  // margin-left: 580px;
-  // margin-top: 93px;
-  // margin-top: -300px;
 }
 
 .positionmenu {
@@ -53,18 +49,5 @@ $bg-darkblue: rgba($color-darkblue, 1);
 /*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
-// @media (min-height: 500px) {
-//   body.scroll-past-header .thenav {
-//     color: black; /* Change text color to white when scrolling past */
-//   }
-// }
-
-// @supports (contain: paint) and (not (-moz-appearance: none)) {
-
-// }
-
-// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
-
-// }
 
 /*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

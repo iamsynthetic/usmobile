@@ -2,9 +2,8 @@
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useWindowSize } from "usehooks-ts";
-// import { useAppContext } from "../../../context";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GoArrowRight } from "react-icons/go";
@@ -15,29 +14,23 @@ export default function SignupSection({ className }: Props) {
   const menucolor = "#f2dcb3";
   const menuhovercolor = "#1a3073";
   const buttoncolor = "#000000";
-
-  const [isMobileSize, setIsMobileSize] = useState(false);
   const tl1 = useRef<GSAPTimeline | null>(null);
 
   const size = useWindowSize();
   function navbuttonhover(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menuhovercolor,
-      // scaleX: 1.1,
-      // scaleY: 1.1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: menucolor,
-      // x: +4,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: menucolor,
-      // x: -2,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
@@ -47,20 +40,16 @@ export default function SignupSection({ className }: Props) {
   function navbuttonleave(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menucolor,
-      // scaleX: 1,
-      // scaleY: 1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeOut",
@@ -105,23 +94,6 @@ export default function SignupSection({ className }: Props) {
       });
   });
 
-  // let template;
-
-  // if (isMobileSize === false) {
-  // } else {
-  //   template = (
-  //     <div className="flex flex-row max-w-[1440px] px-12"></div>
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   // setIsClient(true);
-  //   if (size.width < 1024) {
-  //     setIsMobileSize(true);
-  //   } else {
-  //     setIsMobileSize(false);
-  //   }
-  // }, [size.width]);
   return (
     <section
       className={clsx(

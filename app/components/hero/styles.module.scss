@@ -38,10 +38,6 @@ $bg-darkblue: rgba($color-darkblue, 1);
   cursor: pointer;
 }
 
-// .backgroundImage {
-//   width: calc(100% - 3rem)
-// }
-
 .backgroundImage {
   width: 100%;
   height: 30vh;
@@ -60,124 +56,14 @@ $bg-darkblue: rgba($color-darkblue, 1);
   background-color: $color-greyblue;
 }
 
-.headertxt {
-  // font-size: 2em;
-  // font-size: clamp(100%, 1rem + 10vw, 200px);
-}
-
-// .herocontentcontainer {
-//   width: 100vw;
-//   height: 100vh;
-//   left: 0;
-//   background-color: orange;
-//   overflow: hidden;
-// }
-
-// .counter {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 40px;
-//   height: 20px;
-//   text-align: center;
-//   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-//   z-index: 0;
-// }
-
-// .counter p {
-//   position: relative;
-//   display: block;
-//   transform: translateY(20px);
-// }
-
-// .hero {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) scale(0.7);
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: green;
-//   // clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-//   will-change: transform;
-//   z-index: 1;
-// }
-
-// .overlaymask {
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: brown;
-
-//   // clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
-//   clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
-//   overflow: hidden;
-// }
-// .overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $bg-darkblue;
-//   // clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-//   clip-path: polygon(10% 100%, 90% 100%, 90% 100%, 10% 100%);
-//   z-index: 2;
-// }
-
-// .header {
-//   position: absolute;
-//   width: 100%;
-//   top: -5%;
-//   left: 0;
-//   clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
-//   z-index: 1;
-// }
-// .headertxt {
-//   font-size: 17vw;
-//   text-align: center;
-//   margin: 0;
-//   padding: 0;
-//   line-height: 100%;
-// }
-
-// .headertxt span {
-//   position: relative;
-//   display: inline-block;
-//   transform: translateY(500px);
-// }
-
-// .heroimgcontainer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 35vh;
-//   overflow: hidden;
-//   z-index: 0;
-// }
-
-// .heroimg {
-//   transform: scale(2);
-// }
-
 @media (max-width: 900px) {
   .header {
     top: 30%;
   }
-  // .heroimgcontainer {
-  //   height: 35vh;
-  // }
 }
 
 /*------------------------------------------------------------------------ end content ------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
-// @supports (contain: paint) and (not (-moz-appearance: none)) {
-
-// }
-
-// @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
-
-// }
 
 /*------------------------------------------------------------------------ end media queries -----------------------------------------------------------------------*/

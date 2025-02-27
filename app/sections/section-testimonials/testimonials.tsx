@@ -2,27 +2,21 @@
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { useRef, useState } from "react";
-// import { useAppContext } from "../../../context";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { GoArrowRight } from "react-icons/go";
-import { CgProfile } from "react-icons/cg";
-import { BellRing, Check } from "lucide-react";
 import { FaCircleUser } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 
 import { cn } from "@/lib/utils";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
-type CardProps = React.ComponentProps<typeof Card>;
 type Props = { className?: string };
 
 export default function TestimonialsSection({ className }: Props) {
@@ -82,21 +76,17 @@ export default function TestimonialsSection({ className }: Props) {
   function navbuttonhover(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menuhovercolor,
-      // scaleX: 1.1,
-      // scaleY: 1.1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: menucolor,
-      // x: +4,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: menucolor,
-      // x: -2,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeInOut",
@@ -106,20 +96,16 @@ export default function TestimonialsSection({ className }: Props) {
   function navbuttonleave(element: string, label: string, arrow: string) {
     gsap.to(element, {
       backgroundColor: menucolor,
-      // scaleX: 1,
-      // scaleY: 1,
       duration: 0.5,
       ease: "Expo.easeInOut",
     });
     gsap.to(label, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       ease: "Expo.easeInOut",
     });
     gsap.to(arrow, {
       color: buttoncolor,
-      // x: 0,
       duration: 0.3,
       delay: 0,
       ease: "Expo.easeOut",

@@ -18,10 +18,6 @@ $bg-darkblue: rgba($color-darkblue, 1);
 
 .asection {
   position: relative;
-  // width: 100vw;
-  // height: 100vh;
-  // width: 100%;
-  // height: 100%;
   overflow: hidden;
 }
 
@@ -44,11 +40,6 @@ $bg-darkblue: rgba($color-darkblue, 1);
 }
 
 .stickycards {
-  // background-color: #e3e3e3;
-  // background-color: #1a3073;
-  // width: 100%;
-  // height: 100%;
-  // background-color: purple;
 }
 
 .card {
@@ -61,19 +52,15 @@ $bg-darkblue: rgba($color-darkblue, 1);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   will-change: transform;
-  // width: 30%;
-  // height: 40%;
   width: 500px;
   height: 340px;
   margin-top: 100px;
   padding: 2em;
-  // padding:2em 3em 2em 3em;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   border-radius: 0.75rem;
   background-color: #c7e2f3;
-  // color: #1a3073;
   color: #000000;
 }
 
@@ -90,14 +77,12 @@ $bg-darkblue: rgba($color-darkblue, 1);
   margin-top: 0em;
 }
 .contentquote {
-  // color: #1a3073;
   color: #000000;
   line-height: 0.2em;
   margin-top: 0.7em;
 }
 
 .contentbodytext {
-  // color: #1a3073;
   color: #000000;
   margin-top: 0em;
 }
@@ -118,26 +103,16 @@ $bg-darkblue: rgba($color-darkblue, 1);
 
 /*------------------------------------------------------------------------ media queries --------------------------------------------------------------------------*/
 
-// @media not all and (min-resolution: 0.001dpcm) {
-//   .card {
-//     left: -20%;
-//     background-color: green;
-//   }
-// }
-
 //safari
 @supports (contain: paint) and (not (-moz-appearance: none)) {
   .card {
-    // left: 25%;
     left: calc(50% - 225px);
-    // background-color: purple;
   }
 }
 
 @media only screen and (max-width: 480px) and (hover: none) and (pointer: coarse) {
   .card {
     left: 50%;
-    // background-color: orange;
   }
 }
 

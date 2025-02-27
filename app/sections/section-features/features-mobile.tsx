@@ -32,7 +32,6 @@ export default function FeaturesMobileSection({ className }: Props) {
   const tl20 = useRef<GSAPTimeline | null>(null);
   const tl21 = useRef<GSAPTimeline | null>(null);
   const tl22 = useRef<GSAPTimeline | null>(null);
-  const tl23 = useRef<GSAPTimeline | null>(null);
 
   function buttonhover(element: string, label: string, arrow: string) {
     gsap.to(element, {

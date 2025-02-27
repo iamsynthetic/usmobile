@@ -6,19 +6,17 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery, useWindowSize } from "usehooks-ts";
-import dynamic from "next/dynamic";
 import { useAppContext } from "../../context";
 import Hamburger from "hamburger-react";
 import { IoChevronForward, IoChevronBack } from "react-icons/io5";
 import { GoArrowRight } from "react-icons/go";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const size = useWindowSize();
   const pathname = usePathname();
   const [isPastHero, setIsPastHero] = useState(false);
-  const { abouttitleClicked, scrolledPastHero, setInteractivevHovering } =
+  const { planssectionInView, scrolledPastHero, setInteractivevHovering } =
     useAppContext();
 
   const menucolor = "#1a3073";
@@ -32,15 +30,9 @@ const Navbar = () => {
 
   let mobilemenutemplate;
   let mobilemenubackbutton;
-  let mobilesubmenu;
   let template;
 
-  const md2 = useMediaQuery(
-    "only screen and (min-width : 641px) and (max-width : 700px)"
-  );
-
   const [isOpen, setOpen] = useState(false);
-  const [isFirstTimeLoading, setIsFirstTimeLoading] = useState(true);
   const [showChevron, setShowChevron] = useState(false);
 
   const menulinks = [
@@ -112,13 +104,6 @@ const Navbar = () => {
   ];
 
   const container = useRef(null);
-  const tl1 = useRef<GSAPTimeline | null>(null);
-  const xs = useMediaQuery(
-    "only screen and (min-width : 320px) and (max-width : 768px)"
-  );
-  const md = useMediaQuery(
-    "only screen and (min-width : 769px) and (max-width:100000px)"
-  );
 
   const ChangeNavColor = (thecolor: string) => {
     gsap.to(".nav-hover", {
@@ -127,8 +112,6 @@ const Navbar = () => {
       ease: "Quint.easeInOut",
     });
   };
-
-  let isfirsttime = true;
 
   function navHover(element: string) {
     setInteractivevHovering(true);
@@ -294,12 +277,8 @@ const Navbar = () => {
       ease: "Expo.easeOut",
     });
   }
-  function subnavclick(url: string, element: string) {
-    window.open(url, "_blank", "noreferrer");
-  }
 
   function mobilebackbuttonenter() {
-    // alert("mobile back button enter");
     gsap.to(".backchevron", {
       color: mobilemenuhovercolor,
       x: -5,
@@ -341,7 +320,6 @@ const Navbar = () => {
   function mobileMenu(openthemenu: boolean) {
     if (openthemenu === false) {
       gsap.to(".menu-overlay", {
-        // opacity: 0.6,
         top: "-100vh",
         duration: 0.7,
         ease: "Quint.easeInOut",
@@ -369,26 +347,16 @@ const Navbar = () => {
     }
   }
 
-  function navitemlinkoutclick(url: string) {}
-
   useEffect(() => {
     if (isOpen === false) {
       mobileMenu(false);
     } else if (isOpen === true) {
       mobileMenu(true);
     }
-    // if (scrolledPastHero == true) {
-    //   ChangeNavColor("#000000");
-    //   setIsPastHero(false);
-    // } else if (scrolledPastHero == false) {
-    //   ChangeNavColor("#ffffff");
-    //   setIsPastHero(true);
-    // }
-    console.log("abouttitleClicked is: " + abouttitleClicked);
-    if (abouttitleClicked === true) {
+    if (planssectionInView === true) {
       ChangeNavColor("#000000");
       setIsPastHero(false);
-    } else if (abouttitleClicked === false) {
+    } else if (planssectionInView === false) {
       ChangeNavColor("#ffffff");
       setIsPastHero(true);
     }
@@ -396,7 +364,7 @@ const Navbar = () => {
       setIsFirstMobileMenu(true);
       setOpen(false);
     }
-  }, [abouttitleClicked, pathname, scrolledPastHero, isOpen, size.width]);
+  }, [planssectionInView, pathname, scrolledPastHero, isOpen, size.width]);
 
   if (isFirstMobileMenu === false) {
     mobilemenubackbutton = (
@@ -794,8 +762,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ////////// */}
-        {/* opened nav */}
         {/* prettier-ignore */}
         <div ref={container} className={ isOpen ? `menu-overlay absolute left-0 top-[-100vh] h-screen w-screen flex justify-between -mt-2 bg-white z-20` : `menu-overlay absolute left-0 top-[-100vh] h-screen w-screen flex justify-between -mt-2 bg-white z-20`}>
           <div className="flex flex-col mt-4 pl-4 ">

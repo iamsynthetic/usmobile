@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
@@ -142,22 +142,6 @@ export default function SlidingImages() {
             );
           })}
         </motion.div>
-        {/* <motion.div style={{ x: x2 }} className={`${styles.slider}`}>
-          {slider2.map((brand, index) => {
-            return (
-              <div key={`sl1_${index}`} className={styles.brand}>
-                <div className={`${styles.imagecontainer}`}>
-                  <Image
-                    className={`${styles.theimage}`}
-                    fill={true}
-                    src={`/images/recommended/${brand.src}`}
-                    alt={"image"}
-                  />
-                </div>
-              </div>
-            );
-          })}
-        </motion.div> */}
       </div>
     </>
   );

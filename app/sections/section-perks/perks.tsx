@@ -82,8 +82,6 @@ export default function PerksSection({ className }: Props) {
 
   useGSAP(() => {
     perks.forEach((perk, index) => {
-      console.log("crappy key is: " + perk);
-      console.log("crappy index is: " + index);
       gsap.set([`#perks-perk${index}-image`], { opacity: 0, y: "20px" });
       gsap.set([`#perks-perk${index}-bg`], { opacity: 0, y: "20px" });
       gsap.set([`#perks-perk${index}-number`], { opacity: 0, y: "20px" });

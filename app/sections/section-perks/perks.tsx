@@ -190,7 +190,7 @@ export default function PerksSection({ className }: Props) {
               id="features-perk1-sectiontitle"
               className="sectiontitletxt xs:text-[28px] md:text-[48px] xs:leading-tight text-black"
             >
-              Perks Too Good To&nbsp;Believe desktop
+              Perks Too Good To&nbsp;Believe
             </p>
             <p
               id="features-perk1-sectionbody"

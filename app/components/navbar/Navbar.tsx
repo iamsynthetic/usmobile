@@ -369,7 +369,7 @@ const Navbar = () => {
   if (isFirstMobileMenu === false) {
     mobilemenubackbutton = (
       <div
-        className="backchevron flex flex-col justify-center text-2xl cursor-pointer"
+        className="backchevron flex flex-col justify-center text-3xl cursor-pointer"
         onMouseEnter={() => {
           mobilebackbuttonenter();
         }}
@@ -765,7 +765,7 @@ const Navbar = () => {
         {/* prettier-ignore */}
         <div ref={container} className={ isOpen ? `menu-overlay absolute left-0 top-[-100vh] h-screen w-screen flex justify-between -mt-2 bg-white z-20` : `menu-overlay absolute left-0 top-[-100vh] h-screen w-screen flex justify-between -mt-2 bg-white z-20`}>
           <div className="flex flex-col mt-4 pl-4 ">
-            <div className="flex justify-between z-30 mt-1 h-12 backbutton ">
+            <div className="flex justify-between z-30 mt-[36px] h-12 backbutton ">
               {mobilemenubackbutton}
             </div>
             <div className="flex flex-col justify-center h-screen bg-white">
